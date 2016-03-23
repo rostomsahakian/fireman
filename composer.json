@@ -1,0 +1,13 @@
+{
+    "autoload":{
+        
+        "classmap":[
+            "fireman/classes/forms",
+            "fireman/classes/functions",
+            "fireman/classes/modules",
+            "fireman/classes/templates",
+            "fireman/private",
+            "fireman/classes"
+        ]
+    }
+}

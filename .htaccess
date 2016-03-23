@@ -1,0 +1,12 @@
+Options +Indexes
+IndexOptions -FancyIndexing
+RewriteEngine On
+
+rewriterule ^public_html /index.php [R,L]
+
+
+
+
+
+
+

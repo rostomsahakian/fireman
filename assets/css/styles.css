@@ -1,0 +1,486 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+    border: 0;
+}
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y:  auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+        font-size: 14px;
+
+
+    }
+    .sidebar form input[type="submit"]{
+        font-size: 14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10%;
+/*        padding-right: 100%;*/
+    }   
+    .sidebar form input[type="submit"]:hover{
+
+        background-color:#EEEEEE;
+        padding-top:5px;
+        padding-bottom: 5px;
+/*        padding-left: 10%;*/
+/*        padding-right: 100%;*/
+    }
+}
+@media (max-width: 768px) {
+    .sidebar {
+   
+  background-color:#EEEEEE;
+  padding-bottom: 20px;
+     
+    }
+        .sidebar form input[type="submit"]{
+        font-size: 12px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+/*        padding-left: 10%;*/
+/*        padding-right: 100%;*/
+    }   
+    .sidebar form input[type="submit"]:hover{
+
+        background-color:#fff;
+        padding-top:2px;
+        padding-bottom: 2px;
+/*        padding-left: 10%;*/
+/*        padding-right: 100%;*/
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+
+}
+.nav-sidebar input[type="submit"]{
+    background-image: none;
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+/*@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}*/
+.main .page-header {
+    margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.placeholders h4 {
+    margin-bottom: 0;
+}
+.placeholder {
+    margin-bottom: 20px;
+}
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+#c1_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c1_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c1_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c2_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c2_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c2_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c3_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c3_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c3_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c4_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c4_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c4_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c5_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c5_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c5_page:hover{
+    border:1px solid #428BCA;
+
+}
+
+#c6_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c6_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c6_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c7_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c7_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c7_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c8_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c8_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c8_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c9_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c9_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c9_page:hover{
+    border:1px solid #428BCA;
+
+}
+
+
+#c10_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c10_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c10_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c11_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c11_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c11_page:hover{
+    border:1px solid #428BCA;
+
+}
+
+#c12_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c12_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c12_page:hover{
+    border:1px solid #428BCA;
+
+}
+
+#c13_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c13_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c13_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c14_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c14_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c14_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c15_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c15_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c15_page:hover{
+    border:1px solid #428BCA;
+
+}
+
+#c16_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c16_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c16_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c17_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c17_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c17_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c18_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c18_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c18_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c19_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c19_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c19_page:hover{
+    border:1px solid #428BCA;
+
+}
+#c20_page{
+
+    background-color: transparent;
+    background-image: url("/projects/OOPtraining/backend/assets/images/pg_type_images/c20_page_type.png");
+    height: 200px;
+    width: 150px;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 0 !important;
+}
+#c20_page:hover{
+    border:1px solid #428BCA;
+
+}
+
+
+
+.upload-image{
+    margin-top: 50px;
+}
+
+.content input[type="submit"]{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.content input[type="text"]{
+    margin-bottom: 10px;
+}
+.required{
+    color: #D9534F;
+    
+}
+.page_carousel{
+    margin-bottom: 10px;
+}
+.av_pages input[type="submit"]{
+    
+    background-color:transparent;
+    border:none;
+    color: #337AB7;
+}
+.av_pages button[type="submit"]{
+    background-color:transparent;
+    border:none;
+}
+.delete{
+    color: #D9534F;
+}
+.edit{
+    color:#EC971F;
+}
+.pages{
+    margin-top: 80px;
+}
+
+.delete_button{
+    background: none;
+    border: none;
+    color: transparent;
+}
