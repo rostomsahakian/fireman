@@ -4,6 +4,7 @@
  *This where all the Constatns will be written
  * Absoluth paths and other definition that are used alot
  */
+date_default_timezone_set('America/Los_Angeles');
 define("ABSOLUTH_PATH_PUBLIC_HTML", $_SERVER['DOCUMENT_ROOT']. DIRECTORY_SEPARATOR ."public_html/");
 define("ABSOLUTH_PATH_CLASSES", ABSOLUTH_PATH_PUBLIC_HTML."classes/");
 define("ABSOLUTH_PATH_FORMS", ABSOLUTH_PATH_CLASSES."forms/");
@@ -30,7 +31,7 @@ define("ABSOLUTH_PATH_IMAGES", "../assets/images/");
 
 
 
-
+define("TEST_ENVIRONMENT", true);
 
 
 

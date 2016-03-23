@@ -42,11 +42,13 @@ class control {
         $this->_footer = new footer();
 
         echo $this->Loadheader();
-        if (isset($_SESSION['logged_in'])) {
-            echo $this->LoadBody();
-        } else {
+
+        if (!isset($_SESSION['logged_in']) && (defined('TEST_ENVIRONMENT') && TEST_ENVIRONMENT === false)) {
             $login = $this->_forms->BackEndLoginForm();
+        } else {
+            echo $this->LoadBody();
         }
+
         echo $this->LoadFooter();
     }
 
@@ -57,18 +59,18 @@ class control {
 
     public function Loadheader() {
         /*
-         * Add page title, CSS links, JavaScript links here for the backend
+         * Add page title, CSS links, JavaScript, meta tags links here for the backend
          */
         $this->_pageTitle = (isset($_POST['page_title']) ? $_POST['page_title'] : "Fireman-Home");
         $header_data = array(
             "page_title" => $this->_pageTitle,
             "meta_tags" => array(),
             "css_links" => array(
-                "1" => '<link href="'.ABSOLUTH_PATH_CSS.'bootstrap.min.css" rel="stylesheet">',
-                
+                "1" => '<link href="' . ABSOLUTH_PATH_CSS . 'bootstrap.min.css" rel="stylesheet">',
             ),
             "js_links" => array(
-                
+            ),
+            "meta_links" => array(
             )
         );
 
@@ -82,7 +84,42 @@ class control {
      */
 
     public function LoadBody() {
-        
+
+        /*
+         * Static Content Of the CMS (i.e nav on top and side)
+         */
+        $this->_body->BodyStaticContent();
+        /* !Important
+         * Declare Navigations below 
+         */
+        $top_nav = array(
+            "Home" => "home",
+            "Account" => array(
+                "Profile" => array(
+                    "link" => "profile",
+                    "class" => "glyphicon glyphicon-user",
+                    "badge" => ""
+                ),
+                "Settings" => array(
+                    "link" => "settings",
+                    "class" => "glyphicon glyphicon-cog",
+                    "badge" => ""
+                ),
+                "Messages" => array(
+                    "link" => "messages",
+                    "class" => "glyphicon glyphicon-envelope",
+                    "badge" => "badge"
+                ),
+                "Log out" => array(
+                    "link" => "logout",
+                    "class" => "glyphicon glyphicon-minus-sign",
+                    "badge" => ""
+                )
+            )
+        );
+        $side_nav = array(
+        );
+        $this->_body->TopNavBar($top_nav);
     }
 
     /*
@@ -99,12 +136,12 @@ class control {
             "rights" => "GrowARock.com All Rigths Reserved" . date("Y"),
             "js" => array(
                 "1" => ' <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>',
-                "2" => '<script src="'.ABSOLUTH_PATH_JS.'bootstrap.min.js"></script>'
+                "2" => '<script src="' . ABSOLUTH_PATH_JS . 'bootstrap.min.js"></script>'
             ),
         );
-        
+
         $footer = $this->_footer->GetFooter($footer_data);
-        $footer =  $this->_footer->SetFooter();
+        $footer = $this->_footer->SetFooter();
     }
 
 }

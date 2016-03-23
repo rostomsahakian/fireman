@@ -40,14 +40,14 @@ class header {
             <title><?= $header_data['page_title'] ?></title>
             <head>
                 <?php
+                foreach ($header_data['meta_links'] as $header_meta) {
+                    echo $header_meta;
+                }
                 foreach ($header_data['css_links'] as $header_css) {
                     echo $header_css;
                 }
                 foreach ($header_data['js_links'] as $header_js) {
                     echo $header_js;
-                }
-                foreach ($header_data['meta_links'] as $header_meta) {
-                    echo $header_meta;
                 }
                 ?>
             </head>
